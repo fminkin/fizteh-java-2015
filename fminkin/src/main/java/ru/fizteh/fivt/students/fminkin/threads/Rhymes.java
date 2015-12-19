@@ -1,5 +1,6 @@
 package ru.fizteh.fivt.students.fminkin.threads;
 
+
 /**
  * Created by Федор on 19.12.2015.
  */
@@ -37,11 +38,14 @@ public class Rhymes {
         }
     }
 
-    public void main(int threads) {
+    public void load(int threads) {
         n = threads;
         last = n - 1;
         for (int i = 0; i < n; ++i) {
             (new Thread(new Rhyme(i))).start();
         }
+    }
+    public static void main(String[] args) {
+       (new Rhymes()).load(Integer.parseInt(args[0]));
     }
 }

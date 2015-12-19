@@ -50,8 +50,8 @@ public class Muster {
         }
     }
 
-    public void main(String[] args) {
-        n = Integer.parseInt(args[0]);
+    public void load(Integer number) {
+        n = number;
         random = new Random(SEED);
 
         for (int i = 0; i < n; ++i) {
@@ -80,5 +80,8 @@ public class Muster {
             }
         }
 
+    }
+    public static void main(String[] args) {
+        (new Muster()).load(Integer.parseInt(args[0]));
     }
 }
