@@ -150,7 +150,9 @@ public class BlockingQueue<T> {
                     }
                 }
             }
+
             return answer;
+
         } finally {
             popWait.signalAll();
             stateChanged.unlock();
